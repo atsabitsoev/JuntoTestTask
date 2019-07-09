@@ -12,7 +12,7 @@ import Foundation
 protocol MainControllerDelegate: class {
     
     
-    func butOnlyAuthTapped()
+    @objc func butOnlyAuthTapped()
     @objc func butLogInOutTapped()
     func viewDidLoad()
     func viewWillAppear()

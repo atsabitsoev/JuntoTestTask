@@ -30,13 +30,13 @@ class MainView: UIViewController, MainViewDelegate {
     
     
     private func configureView() {
-        let model = MainModel()
-        self.controller = MainController(view: self,
-                                         model: model)
+        self.controller = MainController(view: self)
     }
     
     
-    func createButtonLogInOut(text: String) {
+    func createButtonLogInOut(auth: Bool) {
+        
+        let text = auth ? "Выйти" : "Войти"
         let item = UIBarButtonItem(title: text,
                                    style: .plain,
                                    target: controller,
@@ -45,12 +45,34 @@ class MainView: UIViewController, MainViewDelegate {
                                                   animated: false)
     }
     
-    func configureButOnlyAuth() {
+    func configureButOnlyAuth(active: Bool) {
+        
+        butOnlyAuth.alpha = active ? 1 : 0.5
+        butOnlyAuth.isUserInteractionEnabled = active
+        
         butOnlyAuth.setTitle("Совершить действие, доступное только после авторизации",
                              for: .normal)
         butOnlyAuth.titleLabel?.numberOfLines = 0
         butOnlyAuth.layer.cornerRadius = 8
         butOnlyAuth.clipsToBounds = true
+        
+        butOnlyAuth.addTarget(controller,
+                              action: #selector(controller!.butOnlyAuthTapped),
+                              for: .touchUpInside)
+    }
+    
+    func showSuccessAlert() {
+        
+        let alert = UIAlertController(title: "Успех",
+                                      message: "Вы выполнили действие, доступное только авторизованным пользователям",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ура",
+                                     style: .default,
+                                     handler: nil)
+        alert.addAction(okAction)
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
     }
 
 }

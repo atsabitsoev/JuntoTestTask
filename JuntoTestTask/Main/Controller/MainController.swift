@@ -11,18 +11,17 @@ import Foundation
 
 class MainController: MainControllerDelegate {
     
-    required init(view: MainViewDelegate,
-                  model: MainModelDelegate) {
+    required init(view: MainViewDelegate) {
         self.view = view
-        self.model = model
+        self.model = MainModel()
     }
     
     private var view: MainViewDelegate?
     private var model: MainModelDelegate?
     
     
-    func butOnlyAuthTapped() {
-        
+    @objc func butOnlyAuthTapped() {
+        view!.showSuccessAlert()
     }
     
     @objc
@@ -35,15 +34,10 @@ class MainController: MainControllerDelegate {
     }
     
     func viewWillAppear() {
-        view!.configureButOnlyAuth()
+        view!.configureButOnlyAuth(active: model!.isAuthorized())
     }
     
     private func createButtonLogInOut() {
-        switch model!.isAuthorized() {
-        case true:
-            view?.createButtonLogInOut(text: "Выйти")
-        case false:
-            view?.createButtonLogInOut(text: "Войти")
-        }
+        view?.createButtonLogInOut(auth: model!.isAuthorized())
     }
 }
