@@ -25,11 +25,12 @@ class PhoneNumberController: PhoneNumberControllerDelegate {
     
     
     func butLogInTapped() {
-        print("loginTapped")
+        model.temporarySaveNumber()
+        model.goToSmsCode()
     }
     
     func butWithoutAuthTapped() {
-        print("withoutAuthTapped")
+        model.goToMain()
     }
     
     func tfPhoneTextChanged(to text: String) {
