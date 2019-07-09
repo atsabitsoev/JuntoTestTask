@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oSY-Ma-kTx">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,29 +10,102 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Phone Number View-->
         <scene sceneID="LCG-Jx-ox5">
             <objects>
-                <viewController id="oSY-Ma-kTx" sceneMemberID="viewController">
+                <viewController id="oSY-Ma-kTx" customClass="PhoneNumberView" customModule="JuntoTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bea-WS-r6Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3r-hr-xoi">
-                                <rect key="frame" x="159" y="325" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lk2-Hu-6xi">
+                                <rect key="frame" x="0.0" y="144" width="414" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш телефон" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3r-hr-xoi" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                <rect key="frame" x="20" y="144" width="374" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="TW0-s2-sGH"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tfPhoneTextChanged:" destination="oSY-Ma-kTx" eventType="editingChanged" id="k6v-6N-cow"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsv-wK-YFv">
+                                <rect key="frame" x="20" y="115" width="374" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-YJ-Tb6">
+                                <rect key="frame" x="151.5" y="751" width="111" height="33"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Войти позже">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="butWithoutAuthTapped:" destination="oSY-Ma-kTx" eventType="touchUpInside" id="vpg-Wl-wZl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-IU-z5w">
+                                <rect key="frame" x="0.0" y="792" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="euU-Sc-29k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="butLogInTapped:" destination="oSY-Ma-kTx" eventType="touchUpInside" id="NGF-eB-SEj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lam-lz-89G" firstAttribute="trailing" secondItem="tsv-wK-YFv" secondAttribute="trailing" constant="20" id="0x7-r7-C6F"/>
+                            <constraint firstItem="h3r-hr-xoi" firstAttribute="top" secondItem="tsv-wK-YFv" secondAttribute="bottom" constant="8" id="9Fv-7h-gV4"/>
+                            <constraint firstItem="Lk2-Hu-6xi" firstAttribute="leading" secondItem="lam-lz-89G" secondAttribute="leading" id="AxT-5U-QJv"/>
+                            <constraint firstItem="Lk2-Hu-6xi" firstAttribute="trailing" secondItem="lam-lz-89G" secondAttribute="trailing" id="BMi-90-nDG"/>
+                            <constraint firstItem="Lk2-Hu-6xi" firstAttribute="top" secondItem="h3r-hr-xoi" secondAttribute="top" id="GVM-Rq-JB8"/>
+                            <constraint firstItem="PeE-IU-z5w" firstAttribute="leading" secondItem="lam-lz-89G" secondAttribute="leading" id="Lup-e6-aUX"/>
+                            <constraint firstItem="tsv-wK-YFv" firstAttribute="leading" secondItem="lam-lz-89G" secondAttribute="leading" constant="20" id="XUT-Nt-Lrh"/>
+                            <constraint firstItem="PeE-IU-z5w" firstAttribute="trailing" secondItem="lam-lz-89G" secondAttribute="trailing" id="aWE-5t-nC7"/>
+                            <constraint firstItem="tsv-wK-YFv" firstAttribute="top" secondItem="lam-lz-89G" secondAttribute="top" constant="71" id="bac-cA-UNO"/>
+                            <constraint firstItem="Lk2-Hu-6xi" firstAttribute="bottom" secondItem="h3r-hr-xoi" secondAttribute="bottom" id="drV-oj-aDO"/>
+                            <constraint firstItem="h3r-hr-xoi" firstAttribute="centerX" secondItem="bea-WS-r6Q" secondAttribute="centerX" id="gg6-dg-FWE"/>
+                            <constraint firstItem="Obd-YJ-Tb6" firstAttribute="centerX" secondItem="bea-WS-r6Q" secondAttribute="centerX" id="l7a-Qh-q2d"/>
+                            <constraint firstItem="PeE-IU-z5w" firstAttribute="top" secondItem="Obd-YJ-Tb6" secondAttribute="bottom" constant="8" id="miE-bI-bKx"/>
+                            <constraint firstItem="h3r-hr-xoi" firstAttribute="leading" secondItem="lam-lz-89G" secondAttribute="leading" constant="20" id="rKz-bh-aac"/>
+                            <constraint firstItem="lam-lz-89G" firstAttribute="bottom" secondItem="PeE-IU-z5w" secondAttribute="bottom" constant="20" id="smK-Mc-MUK"/>
+                            <constraint firstItem="lam-lz-89G" firstAttribute="trailing" secondItem="h3r-hr-xoi" secondAttribute="trailing" constant="20" id="xnX-Qg-YKI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lam-lz-89G"/>
                     </view>
+                    <connections>
+                        <outlet property="butLogIn" destination="PeE-IU-z5w" id="wKz-8n-DUo"/>
+                        <outlet property="tfPhone" destination="h3r-hr-xoi" id="16K-cG-GiZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfP-X7-QBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="173"/>
+            <point key="canvasLocation" x="24.637681159420293" y="172.76785714285714"/>
         </scene>
     </scenes>
 </document>

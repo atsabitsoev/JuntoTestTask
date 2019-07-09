@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		899862FB6CB23868C3E83C68 /* Pods_JuntoTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */; };
 		ACEB671E22D4FA8800DE80CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB671D22D4FA8800DE80CD /* AppDelegate.swift */; };
 		ACEB672022D4FA8800DE80CD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB671F22D4FA8800DE80CD /* MainView.swift */; };
 		ACEB672322D4FA8800DE80CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB672122D4FA8800DE80CD /* Main.storyboard */; };
@@ -21,9 +22,14 @@
 		ACEB674822D528A200DE80CD /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB674722D528A200DE80CD /* PhoneNumberController.swift */; };
 		ACEB674A22D528AF00DE80CD /* PhoneNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB674922D528AF00DE80CD /* PhoneNumberModel.swift */; };
 		ACEB674C22D528BD00DE80CD /* PhoneNumber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB674B22D528BD00DE80CD /* PhoneNumber.storyboard */; };
+		ACEB674E22D52DC200DE80CD /* PhoneNumberViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB674D22D52DC200DE80CD /* PhoneNumberViewDelegate.swift */; };
+		ACEB675022D52E3600DE80CD /* PhoneNumberControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB674F22D52E3600DE80CD /* PhoneNumberControllerDelegate.swift */; };
+		ACEB675222D52F1700DE80CD /* PhoneNumberModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675122D52F1700DE80CD /* PhoneNumberModelDelegate.swift */; };
+		ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675422D5300200DE80CD /* RegistrationItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78523DE0D399A9179C84173F /* Pods-JuntoTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuntoTestTask.debug.xcconfig"; path = "Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		ACEB671A22D4FA8800DE80CD /* JuntoTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuntoTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEB671D22D4FA8800DE80CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACEB671F22D4FA8800DE80CD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -40,6 +46,12 @@
 		ACEB674722D528A200DE80CD /* PhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
 		ACEB674922D528AF00DE80CD /* PhoneNumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberModel.swift; sourceTree = "<group>"; };
 		ACEB674B22D528BD00DE80CD /* PhoneNumber.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhoneNumber.storyboard; sourceTree = "<group>"; };
+		ACEB674D22D52DC200DE80CD /* PhoneNumberViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewDelegate.swift; sourceTree = "<group>"; };
+		ACEB674F22D52E3600DE80CD /* PhoneNumberControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberControllerDelegate.swift; sourceTree = "<group>"; };
+		ACEB675122D52F1700DE80CD /* PhoneNumberModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberModelDelegate.swift; sourceTree = "<group>"; };
+		ACEB675422D5300200DE80CD /* RegistrationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationItem.swift; sourceTree = "<group>"; };
+		E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuntoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuntoTestTask.release.xcconfig"; path = "Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899862FB6CB23868C3E83C68 /* Pods_JuntoTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561A51D05750515D364FBCCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ACEB671122D4FA8800DE80CD = {
 			isa = PBXGroup;
 			children = (
 				ACEB671C22D4FA8800DE80CD /* JuntoTestTask */,
 				ACEB671B22D4FA8800DE80CD /* Products */,
+				C6A45BB78E16D00FD1CEDDC6 /* Pods */,
+				561A51D05750515D364FBCCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +154,7 @@
 		ACEB674122D51ED000DE80CD /* PhoneNumber */ = {
 			isa = PBXGroup;
 			children = (
+				ACEB675322D52FDB00DE80CD /* Entities */,
 				ACEB674622D51F0000DE80CD /* Model */,
 				ACEB674522D51EFC00DE80CD /* Controller */,
 				ACEB674422D51EF700DE80CD /* View */,
@@ -143,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				ACEB674222D51EF300DE80CD /* PhoneNumberView.swift */,
+				ACEB674D22D52DC200DE80CD /* PhoneNumberViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				ACEB674722D528A200DE80CD /* PhoneNumberController.swift */,
+				ACEB674F22D52E3600DE80CD /* PhoneNumberControllerDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,8 +185,26 @@
 			isa = PBXGroup;
 			children = (
 				ACEB674922D528AF00DE80CD /* PhoneNumberModel.swift */,
+				ACEB675122D52F1700DE80CD /* PhoneNumberModelDelegate.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACEB675322D52FDB00DE80CD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB675422D5300200DE80CD /* RegistrationItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C6A45BB78E16D00FD1CEDDC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78523DE0D399A9179C84173F /* Pods-JuntoTestTask.debug.xcconfig */,
+				EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACEB672C22D4FA8A00DE80CD /* Build configuration list for PBXNativeTarget "JuntoTestTask" */;
 			buildPhases = (
+				2F54289A81CF68E6ADCB6282 /* [CP] Check Pods Manifest.lock */,
 				ACEB671622D4FA8800DE80CD /* Sources */,
 				ACEB671722D4FA8800DE80CD /* Frameworks */,
 				ACEB671822D4FA8800DE80CD /* Resources */,
+				644E1DAD51EBC39EAB75FB01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,11 +276,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F54289A81CF68E6ADCB6282 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JuntoTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		644E1DAD51EBC39EAB75FB01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ACEB671622D4FA8800DE80CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEB675222D52F1700DE80CD /* PhoneNumberModelDelegate.swift in Sources */,
+				ACEB675022D52E3600DE80CD /* PhoneNumberControllerDelegate.swift in Sources */,
+				ACEB674E22D52DC200DE80CD /* PhoneNumberViewDelegate.swift in Sources */,
+				ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */,
 				ACEB673822D5066F00DE80CD /* MainViewDelegate.swift in Sources */,
 				ACEB672022D4FA8800DE80CD /* MainView.swift in Sources */,
 				ACEB673622D4FEF400DE80CD /* MainController.swift in Sources */,
@@ -388,6 +485,7 @@
 		};
 		ACEB672D22D4FA8A00DE80CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78523DE0D399A9179C84173F /* Pods-JuntoTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -406,6 +504,7 @@
 		};
 		ACEB672E22D4FA8A00DE80CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

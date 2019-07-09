@@ -7,3 +7,28 @@
 //
 
 import Foundation
+import PhoneNumberKit
+
+
+class PhoneNumberModel: PhoneNumberModelDelegate {
+    
+    
+    func goToMain() {
+        
+    }
+    
+    func temporarySaveNumber() {
+        
+    }
+    
+    func goToSmsCode() {
+        
+    }
+    
+    func checkPhone(_ phone: String) -> Bool {
+        guard (try? PhoneNumberKit().parse(phone)) != nil else {
+            return false
+        }
+        return true
+    }
+}
