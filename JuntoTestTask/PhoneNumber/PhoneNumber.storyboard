@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lk2-Hu-6xi">
-                                <rect key="frame" x="0.0" y="100" width="414" height="32"/>
+                                <rect key="frame" x="0.0" y="49" width="414" height="32"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+7" placeholder="Ваш телефон" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3r-hr-xoi" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                <rect key="frame" x="20" y="100" width="374" height="32"/>
+                                <rect key="frame" x="20" y="49" width="374" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="TW0-s2-sGH"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsv-wK-YFv">
-                                <rect key="frame" x="20" y="71" width="374" height="21"/>
+                                <rect key="frame" x="20" y="20" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                             <constraint firstItem="PeE-IU-z5w" firstAttribute="leading" secondItem="lam-lz-89G" secondAttribute="leading" id="Lup-e6-aUX"/>
                             <constraint firstItem="tsv-wK-YFv" firstAttribute="leading" secondItem="lam-lz-89G" secondAttribute="leading" constant="20" id="XUT-Nt-Lrh"/>
                             <constraint firstItem="PeE-IU-z5w" firstAttribute="trailing" secondItem="lam-lz-89G" secondAttribute="trailing" id="aWE-5t-nC7"/>
-                            <constraint firstItem="tsv-wK-YFv" firstAttribute="top" secondItem="lam-lz-89G" secondAttribute="top" constant="71" id="bac-cA-UNO"/>
+                            <constraint firstItem="tsv-wK-YFv" firstAttribute="top" secondItem="lam-lz-89G" secondAttribute="top" constant="20" id="bac-cA-UNO"/>
                             <constraint firstItem="Lk2-Hu-6xi" firstAttribute="bottom" secondItem="h3r-hr-xoi" secondAttribute="bottom" id="drV-oj-aDO"/>
                             <constraint firstItem="h3r-hr-xoi" firstAttribute="centerX" secondItem="bea-WS-r6Q" secondAttribute="centerX" id="gg6-dg-FWE"/>
                             <constraint firstItem="Obd-YJ-Tb6" firstAttribute="centerX" secondItem="bea-WS-r6Q" secondAttribute="centerX" id="l7a-Qh-q2d"/>

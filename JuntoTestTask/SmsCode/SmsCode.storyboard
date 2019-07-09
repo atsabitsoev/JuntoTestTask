@@ -10,20 +10,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sms Code View-->
+        <!--Вход-->
         <scene sceneID="BMZ-cm-WQb">
             <objects>
-                <viewController storyboardIdentifier="SmsCodeView" id="hNV-C8-dDr" customClass="SmsCodeView" customModule="JuntoTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SmsCodeView" title="Вход" id="hNV-C8-dDr" customClass="SmsCodeView" customModule="JuntoTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GQH-fQ-PRY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код из смс" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RS-Pi-MrW">
+                                <rect key="frame" x="20" y="64" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-hF-NGp">
+                                <rect key="frame" x="135" y="162.5" width="144" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <state key="normal" title="Отправить код еще раз"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHt-Lt-ORR" customClass="DotsView" customModule="JuntoTestTask" customModuleProvider="target">
+                                <rect key="frame" x="20" y="92.5" width="374" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xAX-oe-VfZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalDots">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="solidDots">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2RS-Pi-MrW" firstAttribute="leading" secondItem="Ae6-E6-8JP" secondAttribute="leading" constant="20" id="6SN-qK-OWb"/>
+                            <constraint firstItem="NHt-Lt-ORR" firstAttribute="leading" secondItem="Ae6-E6-8JP" secondAttribute="leading" constant="20" id="Cjz-pi-pbn"/>
+                            <constraint firstItem="2RS-Pi-MrW" firstAttribute="top" secondItem="Ae6-E6-8JP" secondAttribute="top" constant="20" id="EoB-TE-G5S"/>
+                            <constraint firstItem="NHt-Lt-ORR" firstAttribute="top" secondItem="2RS-Pi-MrW" secondAttribute="bottom" constant="8" id="TmI-8n-VOa"/>
+                            <constraint firstItem="UNq-hF-NGp" firstAttribute="centerX" secondItem="GQH-fQ-PRY" secondAttribute="centerX" id="dHI-sj-ZHz"/>
+                            <constraint firstItem="Ae6-E6-8JP" firstAttribute="trailing" secondItem="NHt-Lt-ORR" secondAttribute="trailing" constant="20" id="g7K-z3-Cug"/>
+                            <constraint firstItem="Ae6-E6-8JP" firstAttribute="trailing" secondItem="2RS-Pi-MrW" secondAttribute="trailing" constant="20" id="kzx-ng-LrE"/>
+                            <constraint firstItem="UNq-hF-NGp" firstAttribute="top" secondItem="NHt-Lt-ORR" secondAttribute="bottom" constant="20" id="pv1-Ui-lkE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ae6-E6-8JP"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjm-y9-7KA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="159"/>
+            <point key="canvasLocation" x="63.768115942028992" y="158.70535714285714"/>
         </scene>
     </scenes>
 </document>

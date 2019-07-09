@@ -30,6 +30,7 @@
 		ACEB675B22D53AEA00DE80CD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */; };
 		ACEB675E22D5453200DE80CD /* SmsCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675D22D5453200DE80CD /* SmsCodeView.swift */; };
 		ACEB676022D5453F00DE80CD /* SmsCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB675F22D5453F00DE80CD /* SmsCode.storyboard */; };
+		ACEB676622D5471A00DE80CD /* DotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB676522D5471A00DE80CD /* DotsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		ACEB675D22D5453200DE80CD /* SmsCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCodeView.swift; sourceTree = "<group>"; };
 		ACEB675F22D5453F00DE80CD /* SmsCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SmsCode.storyboard; sourceTree = "<group>"; };
+		ACEB676522D5471A00DE80CD /* DotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsView.swift; sourceTree = "<group>"; };
 		E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuntoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuntoTestTask.release.xcconfig"; path = "Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +222,7 @@
 		ACEB675C22D5450B00DE80CD /* SmsCode */ = {
 			isa = PBXGroup;
 			children = (
+				ACEB676422D5470B00DE80CD /* Entities */,
 				ACEB676322D545EE00DE80CD /* Model */,
 				ACEB676222D545E600DE80CD /* Controller */,
 				ACEB676122D545E200DE80CD /* View */,
@@ -248,6 +251,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACEB676422D5470B00DE80CD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB676522D5471A00DE80CD /* DotsView.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		C6A45BB78E16D00FD1CEDDC6 /* Pods */ = {
@@ -385,6 +396,7 @@
 				ACEB675022D52E3600DE80CD /* PhoneNumberControllerDelegate.swift in Sources */,
 				ACEB674E22D52DC200DE80CD /* PhoneNumberViewDelegate.swift in Sources */,
 				ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */,
+				ACEB676622D5471A00DE80CD /* DotsView.swift in Sources */,
 				ACEB673822D5066F00DE80CD /* MainViewDelegate.swift in Sources */,
 				ACEB675E22D5453200DE80CD /* SmsCodeView.swift in Sources */,
 				ACEB675722D539C600DE80CD /* TfPhoneDelegate.swift in Sources */,
