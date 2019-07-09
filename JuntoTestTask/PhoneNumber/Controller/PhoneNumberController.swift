@@ -39,7 +39,7 @@ class PhoneNumberController: PhoneNumberControllerDelegate {
             timer?.invalidate()
         }
         timer = nil
-        timer = Timer.scheduledTimer(withTimeInterval: 0.2,
+        timer = Timer.scheduledTimer(withTimeInterval: 0.3,
                                      repeats: false,
                                      block: { (timer) in
             
