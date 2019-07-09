@@ -24,13 +24,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-hF-NGp">
-                                <rect key="frame" x="135" y="162.5" width="144" height="28"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <state key="normal" title="Отправить код еще раз"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-hF-NGp">
+                                <rect key="frame" x="140.5" y="174.5" width="133" height="26"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Отправить код еще раз">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHt-Lt-ORR" customClass="DotsView" customModule="JuntoTestTask" customModuleProvider="target">
-                                <rect key="frame" x="20" y="92.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="104.5" width="374" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xAX-oe-VfZ"/>
@@ -50,7 +58,7 @@
                             <constraint firstItem="2RS-Pi-MrW" firstAttribute="leading" secondItem="Ae6-E6-8JP" secondAttribute="leading" constant="20" id="6SN-qK-OWb"/>
                             <constraint firstItem="NHt-Lt-ORR" firstAttribute="leading" secondItem="Ae6-E6-8JP" secondAttribute="leading" constant="20" id="Cjz-pi-pbn"/>
                             <constraint firstItem="2RS-Pi-MrW" firstAttribute="top" secondItem="Ae6-E6-8JP" secondAttribute="top" constant="20" id="EoB-TE-G5S"/>
-                            <constraint firstItem="NHt-Lt-ORR" firstAttribute="top" secondItem="2RS-Pi-MrW" secondAttribute="bottom" constant="8" id="TmI-8n-VOa"/>
+                            <constraint firstItem="NHt-Lt-ORR" firstAttribute="top" secondItem="2RS-Pi-MrW" secondAttribute="bottom" constant="20" id="TmI-8n-VOa"/>
                             <constraint firstItem="UNq-hF-NGp" firstAttribute="centerX" secondItem="GQH-fQ-PRY" secondAttribute="centerX" id="dHI-sj-ZHz"/>
                             <constraint firstItem="Ae6-E6-8JP" firstAttribute="trailing" secondItem="NHt-Lt-ORR" secondAttribute="trailing" constant="20" id="g7K-z3-Cug"/>
                             <constraint firstItem="Ae6-E6-8JP" firstAttribute="trailing" secondItem="2RS-Pi-MrW" secondAttribute="trailing" constant="20" id="kzx-ng-LrE"/>
