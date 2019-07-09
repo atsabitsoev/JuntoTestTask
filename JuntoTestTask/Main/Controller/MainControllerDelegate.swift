@@ -8,11 +8,12 @@
 
 import Foundation
 
-
+@objc
 protocol MainControllerDelegate: class {
     
     
     func butOnlyAuthTapped()
-    func butLogInOutTapped()
+    @objc func butLogInOutTapped()
     func viewDidLoad()
+    func viewWillAppear()
 }

@@ -11,5 +11,6 @@ import Foundation
 
 protocol MainViewDelegate: class {
     
-    func createButtonLogInOut(text: String, selector: Selector)
+    func createButtonLogInOut(text: String)
+    func configureButOnlyAuth()
 }

@@ -11,7 +11,7 @@ import UIKit
 class MainView: UIViewController, MainViewDelegate {
     
     
-    private var controller: MainControllerDelegate!
+    private var controller: MainControllerDelegate?
     
     
     @IBOutlet weak var butOnlyAuth: UIButton!
@@ -21,7 +21,11 @@ class MainView: UIViewController, MainViewDelegate {
         super.viewDidLoad()
         
         configureView()
-        controller.viewDidLoad()
+        controller!.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        controller!.viewWillAppear()
     }
     
     
@@ -32,14 +36,22 @@ class MainView: UIViewController, MainViewDelegate {
     }
     
     
-    func createButtonLogInOut(text: String, selector: Selector) {
-        let item = UIBarButtonItem(barButtonSystemItem: .action,
-                                   target: self,
-                                   action: selector)
+    func createButtonLogInOut(text: String) {
+        let item = UIBarButtonItem(title: text,
+                                   style: .plain,
+                                   target: controller,
+                                   action: #selector(controller!.butLogInOutTapped))
         self.navigationItem.setLeftBarButtonItems([item],
                                                   animated: false)
     }
-
+    
+    func configureButOnlyAuth() {
+        butOnlyAuth.setTitle("Совершить действие, доступное только после авторизации",
+                             for: .normal)
+        butOnlyAuth.titleLabel?.numberOfLines = 0
+        butOnlyAuth.layer.cornerRadius = 8
+        butOnlyAuth.clipsToBounds = true
+    }
 
 }
 

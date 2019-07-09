@@ -17,28 +17,33 @@ class MainController: MainControllerDelegate {
         self.model = model
     }
     
-    private weak var view: MainViewDelegate?
-    private weak var model: MainModelDelegate?
+    private var view: MainViewDelegate?
+    private var model: MainModelDelegate?
     
     
     func butOnlyAuthTapped() {
         
     }
     
+    @objc
     func butLogInOutTapped() {
-        
+        print("tap")
     }
     
     func viewDidLoad() {
         createButtonLogInOut()
     }
     
+    func viewWillAppear() {
+        view!.configureButOnlyAuth()
+    }
+    
     private func createButtonLogInOut() {
         switch model!.isAuthorized() {
         case true:
-            view?.createButtonLogInOut(text: "Выйти", selector: <#T##Selector#>)
+            view?.createButtonLogInOut(text: "Выйти")
         case false:
-            view?.createButtonLogInOut(text: "Войти", selector: <#T##Selector#>)
+            view?.createButtonLogInOut(text: "Войти")
         }
     }
 }
