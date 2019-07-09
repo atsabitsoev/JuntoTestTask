@@ -21,6 +21,7 @@ class PhoneNumberView: UIViewController, PhoneNumberViewDelegate {
     
     override func viewDidLoad() {
         configureView()
+        addTapRecognizer()
     }
     
     
@@ -32,6 +33,18 @@ class PhoneNumberView: UIViewController, PhoneNumberViewDelegate {
     func activateButLogIn(activate: Bool) {
         butLogIn.alpha = activate ? 1 : 0.5
         butLogIn.isUserInteractionEnabled = activate
+    }
+    
+    
+    private func addTapRecognizer() {
+        let recognizer = UITapGestureRecognizer(target: self,
+                                                action: #selector(viewTapped))
+        self.view.addGestureRecognizer(recognizer)
+    }
+    
+    @objc
+    private func viewTapped() {
+        self.view.endEditing(true)
     }
     
     
