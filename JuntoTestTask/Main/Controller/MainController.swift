@@ -26,7 +26,10 @@ class MainController: MainControllerDelegate {
     
     @objc
     func butLogInOutTapped() {
-        print("tap")
+        if model!.isAuthorized() {
+            model!.logOut()
+        }
+        view!.goToPhoneView()
     }
     
     func viewDidLoad() {
@@ -38,6 +41,6 @@ class MainController: MainControllerDelegate {
     }
     
     private func createButtonLogInOut() {
-        view?.createButtonLogInOut(auth: model!.isAuthorized())
+        view!.createButtonLogInOut(auth: model!.isAuthorized())
     }
 }

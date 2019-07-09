@@ -13,11 +13,6 @@ class MainModel: MainModelDelegate {
     
     func logOut() {
         UserDefaults.standard.set(false, forKey: "isAuthorized")
-        goToPhoneView()
-    }
-    
-    func goToPhoneView() {
-        print("goToPhoneView")
     }
     
     func isAuthorized() -> Bool {

@@ -13,6 +13,5 @@ protocol MainModelDelegate: class {
     
     
     func logOut()
-    func goToPhoneView()
     func isAuthorized() -> Bool
 }

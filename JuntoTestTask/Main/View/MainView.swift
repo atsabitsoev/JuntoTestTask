@@ -74,6 +74,11 @@ class MainView: UIViewController, MainViewDelegate {
                      animated: true,
                      completion: nil)
     }
+    
+    
+    func goToPhoneView() {
+        self.navigationController!.dismiss(animated: true, completion: nil)
+    }
 
 }
 

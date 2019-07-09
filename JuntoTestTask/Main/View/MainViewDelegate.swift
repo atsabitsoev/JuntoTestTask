@@ -14,4 +14,5 @@ protocol MainViewDelegate: class {
     func createButtonLogInOut(auth: Bool)
     func configureButOnlyAuth(active: Bool)
     func showSuccessAlert()
+    func goToPhoneView()
 }
