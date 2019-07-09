@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+
+class MainModel: MainModelDelegate {
+    
+    func logOut() {
+        UserDefaults.standard.set(false, forKey: "isAuthorized")
+        goToPhoneView()
+    }
+    
+    func goToPhoneView() {
+        print("goToPhoneView")
+    }
+    
+    func isAuthorized() -> Bool {
+        return UserDefaults.standard.bool(forKey: "isAuthorized")
+    }
+}

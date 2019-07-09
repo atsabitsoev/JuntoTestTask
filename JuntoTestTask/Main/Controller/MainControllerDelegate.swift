@@ -1,5 +1,5 @@
 //
-//  MainViewDelegate.swift
+//  MainControllerDelegate.swift
 //  JuntoTestTask
 //
 //  Created by Ацамаз Бицоев on 09/07/2019.
@@ -9,7 +9,10 @@
 import Foundation
 
 
-protocol MainViewDelegate: class {
+protocol MainControllerDelegate: class {
     
-    func createButtonLogInOut(text: String, selector: Selector)
+    
+    func butOnlyAuthTapped()
+    func butLogInOutTapped()
+    func viewDidLoad()
 }

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MainView: UIViewController {
+class MainView: UIViewController, MainViewDelegate {
     
     
-    private var controller: MainController!
+    private var controller: MainControllerDelegate!
     
     
     @IBOutlet weak var butOnlyAuth: UIButton!
@@ -26,7 +26,9 @@ class MainView: UIViewController {
     
     
     private func configureView() {
-        self.controller = MainController(view: self)
+        let model = MainModel()
+        self.controller = MainController(view: self,
+                                         model: model)
     }
     
     
