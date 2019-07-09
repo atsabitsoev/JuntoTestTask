@@ -59,7 +59,9 @@ class PhoneNumberView: UIViewController, PhoneNumberViewDelegate {
     }
     
     func goToSmsCode() {
-        
+        let storyboard = UIStoryboard(name: "SmsCode", bundle: nil)
+        let smsCodeView = storyboard.instantiateViewController(withIdentifier: "SmsCodeView")
+        self.navigationController!.show(smsCodeView, sender: nil)
     }
     
     

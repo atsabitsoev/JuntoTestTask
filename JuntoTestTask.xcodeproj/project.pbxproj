@@ -28,6 +28,8 @@
 		ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675422D5300200DE80CD /* RegistrationItem.swift */; };
 		ACEB675722D539C600DE80CD /* TfPhoneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675622D539C600DE80CD /* TfPhoneDelegate.swift */; };
 		ACEB675B22D53AEA00DE80CD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */; };
+		ACEB675E22D5453200DE80CD /* SmsCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675D22D5453200DE80CD /* SmsCodeView.swift */; };
+		ACEB676022D5453F00DE80CD /* SmsCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB675F22D5453F00DE80CD /* SmsCode.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		ACEB675422D5300200DE80CD /* RegistrationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationItem.swift; sourceTree = "<group>"; };
 		ACEB675622D539C600DE80CD /* TfPhoneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfPhoneDelegate.swift; sourceTree = "<group>"; };
 		ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		ACEB675D22D5453200DE80CD /* SmsCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCodeView.swift; sourceTree = "<group>"; };
+		ACEB675F22D5453F00DE80CD /* SmsCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SmsCode.storyboard; sourceTree = "<group>"; };
 		E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuntoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuntoTestTask.release.xcconfig"; path = "Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,7 @@
 				ACEB675922D53AD900DE80CD /* Extensions */,
 				ACEB672F22D4FAE400DE80CD /* Main */,
 				ACEB674122D51ED000DE80CD /* PhoneNumber */,
+				ACEB675C22D5450B00DE80CD /* SmsCode */,
 				ACEB673022D4FCA700DE80CD /* Supporting Files */,
 				ACEB672922D4FA8A00DE80CD /* Info.plist */,
 			);
@@ -212,6 +217,39 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		ACEB675C22D5450B00DE80CD /* SmsCode */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB676322D545EE00DE80CD /* Model */,
+				ACEB676222D545E600DE80CD /* Controller */,
+				ACEB676122D545E200DE80CD /* View */,
+				ACEB675F22D5453F00DE80CD /* SmsCode.storyboard */,
+			);
+			path = SmsCode;
+			sourceTree = "<group>";
+		};
+		ACEB676122D545E200DE80CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB675D22D5453200DE80CD /* SmsCodeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACEB676222D545E600DE80CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ACEB676322D545EE00DE80CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C6A45BB78E16D00FD1CEDDC6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEB676022D5453F00DE80CD /* SmsCode.storyboard in Resources */,
 				ACEB674C22D528BD00DE80CD /* PhoneNumber.storyboard in Resources */,
 				ACEB672822D4FA8A00DE80CD /* LaunchScreen.storyboard in Resources */,
 				ACEB672522D4FA8A00DE80CD /* Assets.xcassets in Resources */,
@@ -347,6 +386,7 @@
 				ACEB674E22D52DC200DE80CD /* PhoneNumberViewDelegate.swift in Sources */,
 				ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */,
 				ACEB673822D5066F00DE80CD /* MainViewDelegate.swift in Sources */,
+				ACEB675E22D5453200DE80CD /* SmsCodeView.swift in Sources */,
 				ACEB675722D539C600DE80CD /* TfPhoneDelegate.swift in Sources */,
 				ACEB672022D4FA8800DE80CD /* MainView.swift in Sources */,
 				ACEB673622D4FEF400DE80CD /* MainController.swift in Sources */,
