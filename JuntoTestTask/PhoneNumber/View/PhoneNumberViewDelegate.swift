@@ -13,4 +13,5 @@ protocol PhoneNumberViewDelegate {
     
     func activateButLogIn(activate: Bool)
     func goToMainVC()
+    func goToSmsCode()
 }

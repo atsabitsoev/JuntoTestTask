@@ -52,9 +52,14 @@ class PhoneNumberView: UIViewController, PhoneNumberViewDelegate {
     func goToMainVC() {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainView = storyboard.instantiateViewController(withIdentifier: "Main")
-        self.navigationController?.show(mainView,
-                                        sender: nil)
+        let mainView = storyboard.instantiateViewController(withIdentifier: "MainNav")
+        self.present(mainView,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    func goToSmsCode() {
+        
     }
     
     

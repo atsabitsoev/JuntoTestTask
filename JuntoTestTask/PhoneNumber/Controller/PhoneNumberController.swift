@@ -26,7 +26,7 @@ class PhoneNumberController: PhoneNumberControllerDelegate {
     
     func butLogInTapped(phoneNumber: String) {
         model.temporarySaveNumber(phoneNumber)
-        model.goToSmsCode()
+        view.goToSmsCode()
     }
     
     func butWithoutAuthTapped() {
