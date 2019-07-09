@@ -24,13 +24,14 @@ class PhoneNumberController: PhoneNumberControllerDelegate {
     var timer: Timer?
     
     
-    func butLogInTapped() {
-        model.temporarySaveNumber()
+    func butLogInTapped(phoneNumber: String) {
+        model.temporarySaveNumber(phoneNumber)
         model.goToSmsCode()
     }
     
     func butWithoutAuthTapped() {
-        model.goToMain()
+        model.clearItem()
+        view.goToMainVC()
     }
     
     func tfPhoneTextChanged(to text: String) {

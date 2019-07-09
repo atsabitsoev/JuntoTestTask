@@ -13,16 +13,13 @@ import PhoneNumberKit
 class PhoneNumberModel: PhoneNumberModelDelegate {
     
     
-    func goToMain() {
-        
+    
+    func clearItem() {
+        RegistrationItem.standard.clearItem()
     }
     
-    func temporarySaveNumber() {
-        
-    }
-    
-    func goToSmsCode() {
-        
+    func temporarySaveNumber(_ phone: String) {
+        RegistrationItem.standard.phone = "+\(phone.onlyNumbers())"
     }
     
     func checkPhone(_ phone: String) -> Bool {

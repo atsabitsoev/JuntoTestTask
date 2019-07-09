@@ -26,6 +26,8 @@
 		ACEB675022D52E3600DE80CD /* PhoneNumberControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB674F22D52E3600DE80CD /* PhoneNumberControllerDelegate.swift */; };
 		ACEB675222D52F1700DE80CD /* PhoneNumberModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675122D52F1700DE80CD /* PhoneNumberModelDelegate.swift */; };
 		ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675422D5300200DE80CD /* RegistrationItem.swift */; };
+		ACEB675722D539C600DE80CD /* TfPhoneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675622D539C600DE80CD /* TfPhoneDelegate.swift */; };
+		ACEB675B22D53AEA00DE80CD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		ACEB674F22D52E3600DE80CD /* PhoneNumberControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberControllerDelegate.swift; sourceTree = "<group>"; };
 		ACEB675122D52F1700DE80CD /* PhoneNumberModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberModelDelegate.swift; sourceTree = "<group>"; };
 		ACEB675422D5300200DE80CD /* RegistrationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationItem.swift; sourceTree = "<group>"; };
+		ACEB675622D539C600DE80CD /* TfPhoneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfPhoneDelegate.swift; sourceTree = "<group>"; };
+		ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuntoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuntoTestTask.release.xcconfig"; path = "Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +99,7 @@
 		ACEB671C22D4FA8800DE80CD /* JuntoTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				ACEB675922D53AD900DE80CD /* Extensions */,
 				ACEB672F22D4FAE400DE80CD /* Main */,
 				ACEB674122D51ED000DE80CD /* PhoneNumber */,
 				ACEB673022D4FCA700DE80CD /* Supporting Files */,
@@ -168,6 +173,7 @@
 			children = (
 				ACEB674222D51EF300DE80CD /* PhoneNumberView.swift */,
 				ACEB674D22D52DC200DE80CD /* PhoneNumberViewDelegate.swift */,
+				ACEB675622D539C600DE80CD /* TfPhoneDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +202,14 @@
 				ACEB675422D5300200DE80CD /* RegistrationItem.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		ACEB675922D53AD900DE80CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C6A45BB78E16D00FD1CEDDC6 /* Pods */ = {
@@ -333,8 +347,10 @@
 				ACEB674E22D52DC200DE80CD /* PhoneNumberViewDelegate.swift in Sources */,
 				ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */,
 				ACEB673822D5066F00DE80CD /* MainViewDelegate.swift in Sources */,
+				ACEB675722D539C600DE80CD /* TfPhoneDelegate.swift in Sources */,
 				ACEB672022D4FA8800DE80CD /* MainView.swift in Sources */,
 				ACEB673622D4FEF400DE80CD /* MainController.swift in Sources */,
+				ACEB675B22D53AEA00DE80CD /* StringExtensions.swift in Sources */,
 				ACEB674A22D528AF00DE80CD /* PhoneNumberModel.swift in Sources */,
 				ACEB674822D528A200DE80CD /* PhoneNumberController.swift in Sources */,
 				ACEB673D22D5085600DE80CD /* MainModelDelegate.swift in Sources */,

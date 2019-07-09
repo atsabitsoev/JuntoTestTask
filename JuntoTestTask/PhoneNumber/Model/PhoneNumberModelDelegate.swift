@@ -12,8 +12,7 @@ import Foundation
 protocol PhoneNumberModelDelegate {
     
     
-    func goToMain()
-    func temporarySaveNumber()
-    func goToSmsCode()
+    func clearItem()
+    func temporarySaveNumber(_ phone: String)
     func checkPhone(_ phone: String) -> Bool
 }

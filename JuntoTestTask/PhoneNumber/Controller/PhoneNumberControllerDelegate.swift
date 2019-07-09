@@ -11,7 +11,7 @@ import Foundation
 
 protocol PhoneNumberControllerDelegate {
     
-    func butLogInTapped()
+    func butLogInTapped(phoneNumber: String)
     func butWithoutAuthTapped()
     func tfPhoneTextChanged(to text: String)
 }

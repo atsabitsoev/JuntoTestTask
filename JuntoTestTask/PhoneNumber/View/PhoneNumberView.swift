@@ -22,6 +22,7 @@ class PhoneNumberView: UIViewController, PhoneNumberViewDelegate {
     override func viewDidLoad() {
         configureView()
         addTapRecognizer()
+        tfPhone.delegate = self
     }
     
     
@@ -48,6 +49,15 @@ class PhoneNumberView: UIViewController, PhoneNumberViewDelegate {
     }
     
     
+    func goToMainVC() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainView = storyboard.instantiateViewController(withIdentifier: "Main")
+        self.navigationController?.show(mainView,
+                                        sender: nil)
+    }
+    
+    
     @IBAction func tfPhoneTextChanged(_ sender: PhoneNumberTextField) {
         controller?.tfPhoneTextChanged(to: sender.text!)
     }
@@ -59,7 +69,7 @@ class PhoneNumberView: UIViewController, PhoneNumberViewDelegate {
     
     
     @IBAction func butLogInTapped(_ sender: UIButton) {
-        controller?.butLogInTapped()
+        controller?.butLogInTapped(phoneNumber: tfPhone.text!)
     }
     
 }

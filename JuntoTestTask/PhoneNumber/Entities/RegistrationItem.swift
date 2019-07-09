@@ -19,4 +19,11 @@ class RegistrationItem {
     var phone: String?
     var firstName: String?
     var lastName: String?
+    
+    
+    func clearItem() {
+        self.phone = nil
+        self.firstName = nil
+        self.lastName = nil
+    }
 }
