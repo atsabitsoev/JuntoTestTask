@@ -39,7 +39,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="tfCodeTextChanged:" destination="hNV-C8-dDr" eventType="editingChanged" id="WnL-Qy-2ZD"/>
                                         </connections>

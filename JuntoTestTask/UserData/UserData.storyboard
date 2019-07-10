@@ -17,7 +17,86 @@
                     <view key="view" contentMode="scaleToFill" id="KhL-9o-pds">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHx-ki-EBT">
+                                <rect key="frame" x="0.0" y="792" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Kld-4F-lcI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите свои данные" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qIL-EC-Em6">
+                                <rect key="frame" x="20" y="64" width="374" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XeX-kh-j2y">
+                                <rect key="frame" x="0.0" y="93" width="414" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHu-3g-jTy">
+                                <rect key="frame" x="20" y="93" width="374" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="yNg-3i-vyd"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUp-sM-Txf">
+                                <rect key="frame" x="0.0" y="133" width="414" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Фамилия" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzs-fB-hNX">
+                                <rect key="frame" x="20" y="133" width="374" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="jHE-gb-5nr"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XeX-kh-j2y" firstAttribute="trailing" secondItem="yah-xP-99f" secondAttribute="trailing" id="2Be-Ft-Nsk"/>
+                            <constraint firstItem="QUp-sM-Txf" firstAttribute="top" secondItem="vzs-fB-hNX" secondAttribute="top" id="2aZ-72-vMo"/>
+                            <constraint firstItem="XeX-kh-j2y" firstAttribute="top" secondItem="lHu-3g-jTy" secondAttribute="top" id="3nt-0V-Hpx"/>
+                            <constraint firstItem="vzs-fB-hNX" firstAttribute="leading" secondItem="yah-xP-99f" secondAttribute="leading" constant="20" id="Dw6-ZQ-phE"/>
+                            <constraint firstItem="qIL-EC-Em6" firstAttribute="leading" secondItem="yah-xP-99f" secondAttribute="leading" constant="20" id="Glm-aR-Zxa"/>
+                            <constraint firstItem="yah-xP-99f" firstAttribute="trailing" secondItem="qIL-EC-Em6" secondAttribute="trailing" constant="20" id="MbK-52-v8t"/>
+                            <constraint firstItem="XeX-kh-j2y" firstAttribute="leading" secondItem="yah-xP-99f" secondAttribute="leading" id="MlT-My-wka"/>
+                            <constraint firstItem="QUp-sM-Txf" firstAttribute="top" secondItem="XeX-kh-j2y" secondAttribute="bottom" constant="8" id="PqS-Zn-a46"/>
+                            <constraint firstItem="XeX-kh-j2y" firstAttribute="bottom" secondItem="lHu-3g-jTy" secondAttribute="bottom" id="Vhm-Rx-SuE"/>
+                            <constraint firstItem="yah-xP-99f" firstAttribute="bottom" secondItem="LHx-ki-EBT" secondAttribute="bottom" constant="20" id="WRP-hJ-RDo"/>
+                            <constraint firstItem="QUp-sM-Txf" firstAttribute="bottom" secondItem="vzs-fB-hNX" secondAttribute="bottom" id="XfU-dv-ogs"/>
+                            <constraint firstItem="QUp-sM-Txf" firstAttribute="trailing" secondItem="yah-xP-99f" secondAttribute="trailing" id="bcS-hG-tiB"/>
+                            <constraint firstItem="yah-xP-99f" firstAttribute="trailing" secondItem="lHu-3g-jTy" secondAttribute="trailing" constant="20" id="cJ4-5C-fVn"/>
+                            <constraint firstItem="yah-xP-99f" firstAttribute="trailing" secondItem="vzs-fB-hNX" secondAttribute="trailing" constant="20" id="gnP-aE-fjB"/>
+                            <constraint firstItem="XeX-kh-j2y" firstAttribute="top" secondItem="qIL-EC-Em6" secondAttribute="bottom" constant="8" id="j4s-cq-NDK"/>
+                            <constraint firstItem="LHx-ki-EBT" firstAttribute="leading" secondItem="yah-xP-99f" secondAttribute="leading" id="nJc-kc-sMT"/>
+                            <constraint firstItem="qIL-EC-Em6" firstAttribute="top" secondItem="yah-xP-99f" secondAttribute="top" constant="20" id="suD-S7-Ygk"/>
+                            <constraint firstItem="QUp-sM-Txf" firstAttribute="leading" secondItem="yah-xP-99f" secondAttribute="leading" id="xGf-ne-atx"/>
+                            <constraint firstItem="yah-xP-99f" firstAttribute="trailing" secondItem="LHx-ki-EBT" secondAttribute="trailing" id="xtX-1Q-oQa"/>
+                            <constraint firstItem="lHu-3g-jTy" firstAttribute="leading" secondItem="yah-xP-99f" secondAttribute="leading" constant="20" id="y4h-Rn-4uS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yah-xP-99f"/>
                     </view>
                 </viewController>
