@@ -39,8 +39,23 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHt-Lt-ORR" customClass="DotsView" customModule="JuntoTestTask" customModuleProvider="target">
                                 <rect key="frame" x="20" y="104.5" width="374" height="50"/>
+                                <subviews>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDE-I1-NMQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="tfCodeTextChanged:" destination="hNV-C8-dDr" eventType="editingChanged" id="WnL-Qy-2ZD"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="aDE-I1-NMQ" firstAttribute="leading" secondItem="NHt-Lt-ORR" secondAttribute="leading" id="02g-UB-jNo"/>
+                                    <constraint firstAttribute="trailing" secondItem="aDE-I1-NMQ" secondAttribute="trailing" id="bGG-KT-oDd"/>
+                                    <constraint firstItem="aDE-I1-NMQ" firstAttribute="top" secondItem="NHt-Lt-ORR" secondAttribute="top" id="hln-WI-iwF"/>
+                                    <constraint firstAttribute="bottom" secondItem="aDE-I1-NMQ" secondAttribute="bottom" id="pOm-Yc-KSN"/>
                                     <constraint firstAttribute="height" constant="50" id="xAX-oe-VfZ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -66,6 +81,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ae6-E6-8JP"/>
                     </view>
+                    <connections>
+                        <outlet property="tfCode" destination="aDE-I1-NMQ" id="kcs-5U-AOs"/>
+                        <outlet property="viewDots" destination="NHt-Lt-ORR" id="NGe-DY-8rz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjm-y9-7KA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
