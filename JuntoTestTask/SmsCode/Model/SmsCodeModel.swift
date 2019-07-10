@@ -20,6 +20,13 @@ class SmsCodeModel: SmsCodeModelDelegate {
     var controller: SmsCodeControllerDelegate
     
     
+    private var secondsRest = 30 {
+        didSet {
+            self.controller.secondsRestDidSet(secondsRest)
+        }
+    }
+    
+    
     func checkCode(_ code: String) -> Bool {
         guard code == "11111" else { return false }
         return true
@@ -27,5 +34,17 @@ class SmsCodeModel: SmsCodeModelDelegate {
     
     func sendCode() {
         controller.codeSentToUser()
+    }
+    
+    func startTimer() {
+        Timer.scheduledTimer(withTimeInterval: 1,
+                             repeats: true) { (timer) in
+                                
+                                self.secondsRest -= 1
+                                if self.secondsRest == 0 {
+                                    timer.invalidate()
+                                    self.controller.timerEnded()
+                                }
+        }
     }
 }

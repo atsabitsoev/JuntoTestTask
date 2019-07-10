@@ -17,4 +17,6 @@ protocol SmsCodeControllerDelegate {
     func butSendCodeTapped()
     func viewDidLoad()
     func alertOkTapped()
+    func timerEnded()
+    func secondsRestDidSet(_ secondsRest: Int)
 }

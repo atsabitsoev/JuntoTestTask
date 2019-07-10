@@ -16,6 +16,7 @@ class SmsCodeView: UIViewController, SmsCodeViewDelegate {
     
     @IBOutlet weak var viewDots: DotsView!
     @IBOutlet weak var tfCode: UITextField!
+    @IBOutlet weak var butSendCode: UIButton!
     
     
     override func viewDidLoad() {
@@ -62,8 +63,23 @@ class SmsCodeView: UIViewController, SmsCodeViewDelegate {
                      completion: nil)
     }
     
+    func setTextToButSendCode(_ text: String ) {
+        UIView.performWithoutAnimation {
+            self.butSendCode.setTitle(text,
+                                 for: .normal)
+            self.butSendCode.layoutIfNeeded()
+        }
+    }
+    
     func openKeyboard() {
         tfCode.becomeFirstResponder()
+    }
+    
+    
+    func activateButSendCode(_ activate: Bool) {
+        
+        butSendCode.alpha = activate ? 1 : 0.5
+        butSendCode.isUserInteractionEnabled = activate
     }
     
     
@@ -72,5 +88,8 @@ class SmsCodeView: UIViewController, SmsCodeViewDelegate {
         controller.tfCodeTextChanged(to: text)
     }
     
-
+    @IBAction func butSendCodeTapped(_ sender: UIButton) {
+        controller.butSendCodeTapped()
+    }
+    
 }

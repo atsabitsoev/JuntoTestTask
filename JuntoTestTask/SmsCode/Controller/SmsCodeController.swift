@@ -39,7 +39,7 @@ class SmsCodeController: SmsCodeControllerDelegate {
     }
     
     func butSendCodeTapped() {
-        
+        model?.sendCode()
     }
     
     func viewDidLoad() {
@@ -48,6 +48,17 @@ class SmsCodeController: SmsCodeControllerDelegate {
     
     func alertOkTapped() {
         view.openKeyboard()
+        view.activateButSendCode(false)
+        model!.startTimer()
+    }
+    
+    func timerEnded() {
+        view.activateButSendCode(true)
+        view.setTextToButSendCode("Отправить еще раз")
+    }
+    
+    func secondsRestDidSet(_ secondsRest: Int) {
+        view.setTextToButSendCode("Отправить через \(secondsRest) секунд")
     }
     
 }

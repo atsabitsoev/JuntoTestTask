@@ -13,4 +13,5 @@ protocol SmsCodeModelDelegate {
     
     func checkCode(_ code: String) -> Bool
     func sendCode()
+    func startTimer()
 }

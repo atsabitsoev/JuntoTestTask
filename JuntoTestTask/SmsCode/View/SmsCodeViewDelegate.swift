@@ -17,4 +17,6 @@ protocol SmsCodeViewDelegate {
     func setRedCodeColor()
     func showCodeSentAlert()
     func openKeyboard()
+    func activateButSendCode(_ activate: Bool)
+    func setTextToButSendCode(_ text: String )
 }

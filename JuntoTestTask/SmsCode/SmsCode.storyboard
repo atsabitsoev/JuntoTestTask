@@ -24,18 +24,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-hF-NGp">
-                                <rect key="frame" x="140.5" y="174.5" width="133" height="26"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Отправить код еще раз">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                                <integer key="NSUnderline" value="1"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-hF-NGp">
+                                <rect key="frame" x="129.5" y="174.5" width="155" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Отправить через 30 секунд"/>
+                                <connections>
+                                    <action selector="butSendCodeTapped:" destination="hNV-C8-dDr" eventType="touchUpInside" id="WB6-cL-uhC"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHt-Lt-ORR" customClass="DotsView" customModule="JuntoTestTask" customModuleProvider="target">
                                 <rect key="frame" x="20" y="104.5" width="374" height="50"/>
@@ -82,6 +77,7 @@
                         <viewLayoutGuide key="safeArea" id="Ae6-E6-8JP"/>
                     </view>
                     <connections>
+                        <outlet property="butSendCode" destination="UNq-hF-NGp" id="dLM-6o-3pp"/>
                         <outlet property="tfCode" destination="aDE-I1-NMQ" id="kcs-5U-AOs"/>
                         <outlet property="viewDots" destination="NHt-Lt-ORR" id="NGe-DY-8rz"/>
                     </connections>
