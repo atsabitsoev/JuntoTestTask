@@ -33,7 +33,10 @@ class SmsCodeView: UIViewController, SmsCodeViewDelegate {
     
     
     func goToUserDataView() {
-        
+        let storyboard = UIStoryboard(name: "UserData", bundle: nil)
+        let userDataView = storyboard.instantiateViewController(withIdentifier: "UserDataView")
+        self.navigationController?.show(userDataView,
+                                        sender: nil)
     }
     
     func setShowableCode(_ code: String) {
