@@ -21,7 +21,7 @@ class UserDataModel: UserDataModelDelegate {
     
     
     func saveUser(firstName: String, lastName: String) {
-        SQLiteService.registerUser(phone: RegistrationItem.standard.phone!,
+        DBService.registerUser(phone: RegistrationItem.standard.phone!,
                                    firstName: firstName,
                                    lastName: lastName)
     }
