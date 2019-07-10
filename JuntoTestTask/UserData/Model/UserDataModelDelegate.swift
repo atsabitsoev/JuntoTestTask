@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+
+protocol UserDataModelDelegate {
+    
+    
+    func saveUser(firstName: String,
+                  lastName: String)
+    func logIn()
+}

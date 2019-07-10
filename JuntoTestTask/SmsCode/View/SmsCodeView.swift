@@ -39,6 +39,14 @@ class SmsCodeView: UIViewController, SmsCodeViewDelegate {
                                         sender: nil)
     }
     
+    func goToMainView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainView = storyboard.instantiateViewController(withIdentifier: "MainNav")
+        self.navigationController?.present(mainView,
+                                           animated: true,
+                                           completion: nil)
+    }
+    
     func setShowableCode(_ code: String) {
         viewDots.showableCode = code
     }

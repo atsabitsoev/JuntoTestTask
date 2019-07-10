@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+
+protocol UserDataViewDelegate {
+    
+    
+    func goToMainView()
+    func showErrorAlert()
+}

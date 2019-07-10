@@ -47,4 +47,9 @@ class SmsCodeModel: SmsCodeModelDelegate {
                                 }
         }
     }
+    
+    func logIn() {
+        UserDefaults.standard.set(true,
+                                  forKey: "isAuthorized")
+    }
 }

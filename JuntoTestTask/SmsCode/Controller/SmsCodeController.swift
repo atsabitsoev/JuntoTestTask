@@ -31,7 +31,12 @@ class SmsCodeController: SmsCodeControllerDelegate {
         
         guard text.count == 5 else { return }
         if model!.checkCode(text) {
-            view.goToUserDataView()
+            if SQLiteService.isUserRegistered(phone: RegistrationItem.standard.phone!) {
+                model!.logIn()
+                view.goToMainView()
+            } else {
+                view.goToUserDataView()
+            }
         } else {
             view.setRedCodeColor()
             view.clearShowableCode()

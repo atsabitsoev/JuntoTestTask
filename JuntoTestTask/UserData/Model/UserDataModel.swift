@@ -7,3 +7,29 @@
 //
 
 import Foundation
+
+
+class UserDataModel: UserDataModelDelegate {
+    
+    
+    required init(controller: UserDataControllerDelegate) {
+        self.controller = controller
+    }
+    
+    
+    var controller: UserDataControllerDelegate
+    
+    
+    func saveUser(firstName: String, lastName: String) {
+        SQLiteService.registerUser(phone: RegistrationItem.standard.phone!,
+                                   firstName: firstName,
+                                   lastName: lastName)
+    }
+    
+    func logIn() {
+        UserDefaults.standard.set(true,
+                                  forKey: "isAuthorized")
+    }
+    
+    
+}

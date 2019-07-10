@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+
+protocol UserDataControllerDelegate {
+    
+    
+    func butSaveTapped(firstName: String?,
+                       lastName: String?)
+}

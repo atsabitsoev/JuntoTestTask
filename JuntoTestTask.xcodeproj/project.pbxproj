@@ -25,7 +25,6 @@
 		ACEB674E22D52DC200DE80CD /* PhoneNumberViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB674D22D52DC200DE80CD /* PhoneNumberViewDelegate.swift */; };
 		ACEB675022D52E3600DE80CD /* PhoneNumberControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB674F22D52E3600DE80CD /* PhoneNumberControllerDelegate.swift */; };
 		ACEB675222D52F1700DE80CD /* PhoneNumberModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675122D52F1700DE80CD /* PhoneNumberModelDelegate.swift */; };
-		ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675422D5300200DE80CD /* RegistrationItem.swift */; };
 		ACEB675722D539C600DE80CD /* TfPhoneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675622D539C600DE80CD /* TfPhoneDelegate.swift */; };
 		ACEB675B22D53AEA00DE80CD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */; };
 		ACEB675E22D5453200DE80CD /* SmsCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB675D22D5453200DE80CD /* SmsCodeView.swift */; };
@@ -43,6 +42,8 @@
 		ACEB677F22D6586D00DE80CD /* UserDataControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB677E22D6586D00DE80CD /* UserDataControllerDelegate.swift */; };
 		ACEB678122D6587A00DE80CD /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678022D6587A00DE80CD /* UserDataModel.swift */; };
 		ACEB678322D6588500DE80CD /* UserDataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678222D6588500DE80CD /* UserDataModelDelegate.swift */; };
+		ACEB678622D66D1A00DE80CD /* RegistrationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678522D66D1A00DE80CD /* RegistrationItem.swift */; };
+		ACEB678922D66D4100DE80CD /* SQLiteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678822D66D4100DE80CD /* SQLiteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +67,6 @@
 		ACEB674D22D52DC200DE80CD /* PhoneNumberViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewDelegate.swift; sourceTree = "<group>"; };
 		ACEB674F22D52E3600DE80CD /* PhoneNumberControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberControllerDelegate.swift; sourceTree = "<group>"; };
 		ACEB675122D52F1700DE80CD /* PhoneNumberModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberModelDelegate.swift; sourceTree = "<group>"; };
-		ACEB675422D5300200DE80CD /* RegistrationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationItem.swift; sourceTree = "<group>"; };
 		ACEB675622D539C600DE80CD /* TfPhoneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfPhoneDelegate.swift; sourceTree = "<group>"; };
 		ACEB675A22D53AEA00DE80CD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		ACEB675D22D5453200DE80CD /* SmsCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCodeView.swift; sourceTree = "<group>"; };
@@ -84,6 +84,8 @@
 		ACEB677E22D6586D00DE80CD /* UserDataControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataControllerDelegate.swift; sourceTree = "<group>"; };
 		ACEB678022D6587A00DE80CD /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		ACEB678222D6588500DE80CD /* UserDataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModelDelegate.swift; sourceTree = "<group>"; };
+		ACEB678522D66D1A00DE80CD /* RegistrationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationItem.swift; sourceTree = "<group>"; };
+		ACEB678822D66D4100DE80CD /* SQLiteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteService.swift; sourceTree = "<group>"; };
 		E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuntoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuntoTestTask.release.xcconfig"; path = "Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,8 @@
 		ACEB671C22D4FA8800DE80CD /* JuntoTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				ACEB678722D66D2600DE80CD /* Servicies */,
+				ACEB678422D66CF800DE80CD /* Entities */,
 				ACEB675922D53AD900DE80CD /* Extensions */,
 				ACEB672F22D4FAE400DE80CD /* Main */,
 				ACEB674122D51ED000DE80CD /* PhoneNumber */,
@@ -191,7 +195,6 @@
 		ACEB674122D51ED000DE80CD /* PhoneNumber */ = {
 			isa = PBXGroup;
 			children = (
-				ACEB675322D52FDB00DE80CD /* Entities */,
 				ACEB674622D51F0000DE80CD /* Model */,
 				ACEB674522D51EFC00DE80CD /* Controller */,
 				ACEB674422D51EF700DE80CD /* View */,
@@ -226,14 +229,6 @@
 				ACEB675122D52F1700DE80CD /* PhoneNumberModelDelegate.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		ACEB675322D52FDB00DE80CD /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				ACEB675422D5300200DE80CD /* RegistrationItem.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		ACEB675922D53AD900DE80CD /* Extensions */ = {
@@ -327,6 +322,22 @@
 				ACEB677E22D6586D00DE80CD /* UserDataControllerDelegate.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		ACEB678422D66CF800DE80CD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB678522D66D1A00DE80CD /* RegistrationItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		ACEB678722D66D2600DE80CD /* Servicies */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB678822D66D4100DE80CD /* SQLiteService.swift */,
+			);
+			path = Servicies;
 			sourceTree = "<group>";
 		};
 		C6A45BB78E16D00FD1CEDDC6 /* Pods */ = {
@@ -464,16 +475,17 @@
 				ACEB675222D52F1700DE80CD /* PhoneNumberModelDelegate.swift in Sources */,
 				ACEB675022D52E3600DE80CD /* PhoneNumberControllerDelegate.swift in Sources */,
 				ACEB674E22D52DC200DE80CD /* PhoneNumberViewDelegate.swift in Sources */,
-				ACEB675522D5300200DE80CD /* RegistrationItem.swift in Sources */,
 				ACEB677D22D6586100DE80CD /* UserDataController.swift in Sources */,
 				ACEB677B22D6585500DE80CD /* UserDataViewDelegate.swift in Sources */,
 				ACEB676622D5471A00DE80CD /* DotsView.swift in Sources */,
 				ACEB676E22D6455100DE80CD /* SmsCodeControllerDelegate.swift in Sources */,
+				ACEB678622D66D1A00DE80CD /* RegistrationItem.swift in Sources */,
 				ACEB673822D5066F00DE80CD /* MainViewDelegate.swift in Sources */,
 				ACEB675E22D5453200DE80CD /* SmsCodeView.swift in Sources */,
 				ACEB678322D6588500DE80CD /* UserDataModelDelegate.swift in Sources */,
 				ACEB675722D539C600DE80CD /* TfPhoneDelegate.swift in Sources */,
 				ACEB672022D4FA8800DE80CD /* MainView.swift in Sources */,
+				ACEB678922D66D4100DE80CD /* SQLiteService.swift in Sources */,
 				ACEB673622D4FEF400DE80CD /* MainController.swift in Sources */,
 				ACEB675B22D53AEA00DE80CD /* StringExtensions.swift in Sources */,
 				ACEB674A22D528AF00DE80CD /* PhoneNumberModel.swift in Sources */,

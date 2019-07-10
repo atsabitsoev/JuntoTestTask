@@ -2,7 +2,7 @@
 //  RegistrationItem.swift
 //  JuntoTestTask
 //
-//  Created by Ацамаз Бицоев on 09/07/2019.
+//  Created by Ацамаз Бицоев on 10/07/2019.
 //  Copyright © 2019 Ацамаз Бицоев. All rights reserved.
 //
 
@@ -17,13 +17,9 @@ class RegistrationItem {
     
     
     var phone: String?
-    var firstName: String?
-    var lastName: String?
     
     
     func clearItem() {
         self.phone = nil
-        self.firstName = nil
-        self.lastName = nil
     }
 }

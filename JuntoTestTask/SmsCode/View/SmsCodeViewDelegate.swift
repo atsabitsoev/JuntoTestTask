@@ -12,6 +12,7 @@ import Foundation
 protocol SmsCodeViewDelegate {
     
     func goToUserDataView()
+    func goToMainView()
     func setShowableCode(_ code: String)
     func clearShowableCode()
     func setRedCodeColor()
