@@ -43,7 +43,7 @@
 		ACEB678122D6587A00DE80CD /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678022D6587A00DE80CD /* UserDataModel.swift */; };
 		ACEB678322D6588500DE80CD /* UserDataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678222D6588500DE80CD /* UserDataModelDelegate.swift */; };
 		ACEB678622D66D1A00DE80CD /* RegistrationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678522D66D1A00DE80CD /* RegistrationItem.swift */; };
-		ACEB678922D66D4100DE80CD /* SQLiteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678822D66D4100DE80CD /* SQLiteService.swift */; };
+		ACEB678922D66D4100DE80CD /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678822D66D4100DE80CD /* DBService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +85,7 @@
 		ACEB678022D6587A00DE80CD /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		ACEB678222D6588500DE80CD /* UserDataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModelDelegate.swift; sourceTree = "<group>"; };
 		ACEB678522D66D1A00DE80CD /* RegistrationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationItem.swift; sourceTree = "<group>"; };
-		ACEB678822D66D4100DE80CD /* SQLiteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteService.swift; sourceTree = "<group>"; };
+		ACEB678822D66D4100DE80CD /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
 		E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuntoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuntoTestTask.release.xcconfig"; path = "Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -335,7 +335,7 @@
 		ACEB678722D66D2600DE80CD /* Servicies */ = {
 			isa = PBXGroup;
 			children = (
-				ACEB678822D66D4100DE80CD /* SQLiteService.swift */,
+				ACEB678822D66D4100DE80CD /* DBService.swift */,
 			);
 			path = Servicies;
 			sourceTree = "<group>";
@@ -485,7 +485,7 @@
 				ACEB678322D6588500DE80CD /* UserDataModelDelegate.swift in Sources */,
 				ACEB675722D539C600DE80CD /* TfPhoneDelegate.swift in Sources */,
 				ACEB672022D4FA8800DE80CD /* MainView.swift in Sources */,
-				ACEB678922D66D4100DE80CD /* SQLiteService.swift in Sources */,
+				ACEB678922D66D4100DE80CD /* DBService.swift in Sources */,
 				ACEB673622D4FEF400DE80CD /* MainController.swift in Sources */,
 				ACEB675B22D53AEA00DE80CD /* StringExtensions.swift in Sources */,
 				ACEB674A22D528AF00DE80CD /* PhoneNumberModel.swift in Sources */,
