@@ -45,6 +45,7 @@
 		ACEB678622D66D1A00DE80CD /* RegistrationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678522D66D1A00DE80CD /* RegistrationItem.swift */; };
 		ACEB678922D66D4100DE80CD /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB678822D66D4100DE80CD /* DBService.swift */; };
 		ACEB679222D7747900DE80CD /* UserDataTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB679122D7747900DE80CD /* UserDataTFDelegate.swift */; };
+		ACEB679422D777B600DE80CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB679322D777B600DE80CD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		ACEB678522D66D1A00DE80CD /* RegistrationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationItem.swift; sourceTree = "<group>"; };
 		ACEB678822D66D4100DE80CD /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
 		ACEB679122D7747900DE80CD /* UserDataTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataTFDelegate.swift; sourceTree = "<group>"; };
+		ACEB679322D777B600DE80CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E0ED1AEA675BD5210EC3C042 /* Pods_JuntoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuntoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D0576CE9DB5D909558685 /* Pods-JuntoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuntoTestTask.release.xcconfig"; path = "Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				ACEB678522D66D1A00DE80CD /* RegistrationItem.swift */,
+				ACEB679322D777B600DE80CD /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -456,12 +459,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JuntoTestTask/Pods-JuntoTestTask-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -479,6 +486,7 @@
 				ACEB675022D52E3600DE80CD /* PhoneNumberControllerDelegate.swift in Sources */,
 				ACEB674E22D52DC200DE80CD /* PhoneNumberViewDelegate.swift in Sources */,
 				ACEB677D22D6586100DE80CD /* UserDataController.swift in Sources */,
+				ACEB679422D777B600DE80CD /* User.swift in Sources */,
 				ACEB677B22D6585500DE80CD /* UserDataViewDelegate.swift in Sources */,
 				ACEB676622D5471A00DE80CD /* DotsView.swift in Sources */,
 				ACEB676E22D6455100DE80CD /* SmsCodeControllerDelegate.swift in Sources */,

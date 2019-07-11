@@ -7,5 +7,6 @@ target 'JuntoTestTask' do
 
   # Pods for JuntoTestTask
   pod 'PhoneNumberKit', '~> 2.6'
+  pod 'RealmSwift'
 
 end

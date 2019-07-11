@@ -31,7 +31,7 @@ class SmsCodeController: SmsCodeControllerDelegate {
         
         guard text.count == 5 else { return }
         if model!.checkCode(text) {
-            if DBService.isUserRegistered(phone: RegistrationItem.standard.phone!) {
+            if DBService.standard.isUserRegistered(phone: RegistrationItem.standard.phone!) {
                 model!.logIn()
                 view.goToMainView()
             } else {

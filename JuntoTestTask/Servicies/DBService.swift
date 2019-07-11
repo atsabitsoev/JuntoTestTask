@@ -7,19 +7,44 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
 
 
 class DBService {
     
+    private init() {}
+    static let standard = DBService()
     
-    static func isUserRegistered(phone: String) -> Bool {
-        return false
+    
+    private let realm = try! Realm()
+    
+    
+    func isUserRegistered(phone: String) -> Bool {
+        
+        let users = realm.objects(User.self)
+        let newUsers = users.filter { (user) -> Bool in
+            let isEqual = user.phone == phone
+            return isEqual
+        }
+        if newUsers.count > 0 {
+            return true
+        } else {
+            return false
+        }
     }
     
-    static func registerUser(phone: String,
-                             firstName: String,
-                             lastName: String) {
+    func registerUser(phone: String,
+                      firstName: String,
+                      lastName: String) {
         
+        let user = User()
+        user.phone = phone
+        user.firstName = firstName
+        user.lastName = lastName
         
+        try! realm.write {
+            realm.add(user)
+        }
     }
 }

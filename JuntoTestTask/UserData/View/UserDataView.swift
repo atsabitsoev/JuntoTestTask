@@ -54,6 +54,7 @@ class UserDataView: UIViewController, UserDataViewDelegate {
         self.navigationController?.present(mainView,
                                            animated: true,
                                            completion: nil)
+        self.navigationController?.popToRootViewController(animated: false)
     }
     
     func activateButSave(_ activate: Bool) {
