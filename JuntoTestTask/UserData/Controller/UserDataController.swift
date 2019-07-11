@@ -38,4 +38,13 @@ class UserDataController: UserDataControllerDelegate {
         model?.logIn()
         view.goToMainView()
     }
+    
+    func viewDidLoad() {
+        view.addTapRecognizer()
+        view.setDelegates()
+    }
+    
+    @objc func viewTapped() {
+        view.hideKeyboard()
+    }
 }

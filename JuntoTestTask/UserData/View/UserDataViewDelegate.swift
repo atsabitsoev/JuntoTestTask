@@ -14,4 +14,7 @@ protocol UserDataViewDelegate {
     
     func goToMainView()
     func showErrorAlert()
+    func addTapRecognizer()
+    func hideKeyboard()
+    func setDelegates()
 }

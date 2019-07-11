@@ -9,9 +9,12 @@
 import Foundation
 
 
+@objc
 protocol UserDataControllerDelegate {
     
     
     func butSaveTapped(firstName: String?,
                        lastName: String?)
+    func viewDidLoad()
+    @objc func viewTapped()
 }

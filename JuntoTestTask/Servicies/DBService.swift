@@ -19,5 +19,7 @@ class DBService {
     static func registerUser(phone: String,
                              firstName: String,
                              lastName: String) {
+        
+        
     }
 }

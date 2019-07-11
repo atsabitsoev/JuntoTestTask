@@ -14,7 +14,7 @@ class UserDataView: UIViewController, UserDataViewDelegate {
     var controller: UserDataControllerDelegate?
     
     
-    @IBOutlet weak var tfFitstName: UITextField!
+    @IBOutlet weak var tfFirstName: UITextField!
     @IBOutlet weak var tfLastName: UITextField!
     @IBOutlet weak var butSave: UIButton!
     
@@ -23,6 +23,7 @@ class UserDataView: UIViewController, UserDataViewDelegate {
         super.viewDidLoad()
 
         configureView()
+        controller?.viewDidLoad()
     }
     
     
@@ -30,6 +31,21 @@ class UserDataView: UIViewController, UserDataViewDelegate {
         self.controller = UserDataController(view: self)
     }
     
+    
+    func addTapRecognizer() {
+        let recognizer = UITapGestureRecognizer(target: controller,
+                                                action: #selector(controller!.viewTapped))
+        view.addGestureRecognizer(recognizer)
+    }
+    
+    func setDelegates() {
+        tfFirstName.delegate = self
+        tfLastName.delegate = self
+    }
+    
+    func hideKeyboard() {
+        view.endEditing(true)
+    }
     
     func goToMainView() {
         let storyboard = UIStoryboard(name: "Main",
@@ -62,7 +78,7 @@ class UserDataView: UIViewController, UserDataViewDelegate {
 
     
     @IBAction func butSaveTapped(_ sender: UIButton) {
-        controller?.butSaveTapped(firstName: tfFitstName.text,
+        controller?.butSaveTapped(firstName: tfFirstName.text,
                                   lastName: tfLastName.text)
     }
     

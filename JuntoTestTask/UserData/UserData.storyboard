@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Data View-->
+        <!--Данные-->
         <scene sceneID="JZM-Au-b17">
             <objects>
-                <viewController storyboardIdentifier="UserDataView" id="ZNq-lm-VjN" customClass="UserDataView" customModule="JuntoTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDataView" title="Данные" id="ZNq-lm-VjN" customClass="UserDataView" customModule="JuntoTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KhL-9o-pds">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,13 +104,13 @@
                     </view>
                     <connections>
                         <outlet property="butSave" destination="LHx-ki-EBT" id="1ib-xR-AVn"/>
-                        <outlet property="tfFitstName" destination="lHu-3g-jTy" id="cSO-fg-sGL"/>
+                        <outlet property="tfFirstName" destination="lHu-3g-jTy" id="cSO-fg-sGL"/>
                         <outlet property="tfLastName" destination="vzs-fB-hNX" id="p6W-In-2Kb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhk-Rl-aZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101" y="-9"/>
+            <point key="canvasLocation" x="359" y="9"/>
         </scene>
     </scenes>
 </document>
